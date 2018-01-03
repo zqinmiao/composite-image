@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=640,target-densitydpi=device-dpi,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/lib.js"></script>
+    <title>composite image demo</title>
+</head>
+<body>
+<div id="page">
+    <div class="content" id="content1">
+        <div class="change-bg">更改背景图</div>
+        <div class="inner">
+            <!--手势区域 gesture-area-->
+            <div id="gesture-area" class="wrapper"></div>
+            <!--图片合成区 demoCanvas-->
+            <canvas id="myCanvas" width="500" height="707" style="width:100%; height:100%"></canvas>
+        </div>
+        <div class="widget">
+            <!--输入文字-->
+            <div class="text-content">
+                <input type="text" id="input-name" placeholder="姓名">
+                <input type="text" id="input-score" placeholder="悬赏金额">
+            </div>
+            <!--按钮-->
+            <div class="btn-wrap">
+                <div class="upload-img">
+                    上传照片
+                    <input type="file" accept="image/*" name="photo" id="upload-img" multiple>
+                </div>
+                <!--生成的图片并将图片上传至后台-->
+                <div id="upload">生成悬赏令</div>
+            </div>
+        </div>
+    </div>
+    <!-- 结果页 -->
+    <div class="content" id="content2">
+        <div class="result-inner">
+            <div class="img-wrap"><img id="show" src="" height="100%"></div>
+            <div class="save-tip">长按图片保存，进行分享!</div>
+            <div class="replay">
+                <p>继续</p>
+                <p>生成</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--loading-mask-->
+<div class="loading-toast">
+    <div class="mask-transparent"></div>
+    <div class="toast">
+        <i class="loading-icon"></i>
+        <p class="loading-content">正在上传</p>
+    </div>
+</div>
+<script>
+</script>
+<script src="./js/dataBase.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>

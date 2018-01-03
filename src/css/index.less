@@ -1,0 +1,177 @@
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  /*合成图片部分*/
+  &#content1 {
+    position: relative;
+    display: block;
+    .change-bg {
+      position: absolute;
+      z-index: 999;
+      font-size: 18px;
+      top: 10px;
+      left: 10px;
+      background: #fff;
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      border: 3px solid #333;
+      border-radius: 50%;
+      padding: 20px 5px 0;
+      box-sizing: border-box;
+    }
+    .inner {
+      position: relative;
+      width: 500px;
+      height: 707px;
+      margin: 0 auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      overflow: hidden;
+      #gesture-area {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 99;
+        overflow: hidden;
+        &.wrapper {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          z-index: 98;
+          overflow: hidden
+        }
+      }
+    }
+    //部件
+    .widget {
+      position: relative;
+      /*输入文字内容*/
+      .text-content {
+        width: 406px;
+        margin: 0 auto;
+        input {
+          display: block;
+          width: 100%;
+          height: 45px;
+          border: 1px solid #333;
+          border-radius: 10px;
+          line-height: 45px;
+          font-family: '微软雅黑';
+          font-size: 24px;
+          text-align: center;
+          color: #333;
+          &#input-name {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .btn-wrap {
+        position: relative;
+        width: 500px;
+        height: 75px;
+        margin: 10px auto 10px;
+        /*按钮部分*/
+        div {
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          width: 205px;
+          height: 75px;
+          border: 1px solid #333;
+          border-radius: 10px;
+          line-height: 75px;
+          font-family: '微软雅黑';
+          font-size: 30px;
+          text-align: center;
+          color: #333;
+          /*上传照片*/
+          &.upload-img {
+            left: 0;
+            #upload-img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 2;
+              opacity: 0;
+              width: 205px;
+              height: 75px;
+              line-height: 75px;
+            }
+          }
+        }
+        /*生成图片*/
+        #upload {
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      /*微信用户信息*/
+      .user-info {
+        width: 100%;
+        margin-top: 10px;
+        div {
+          text-align: center;
+          img {
+            width: auto;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  /*生成结果部分*/
+  &#content2 {
+    display: none;
+    .result-inner {
+      position: relative;
+      height: 100%;
+      padding-top: 100px;
+      /*生成的图片容器*/
+      .img-wrap {
+        width: 100%;
+        height: 707px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      /*保存*/
+      .save-tip {
+        width: 100%;
+        text-align: center;
+        color: #333333;
+        font-size: 30px;
+      }
+      /*继续生成*/
+      .replay {
+        position: absolute;
+        z-index: 999;
+        font-size: 18px;
+        top: 10px;
+        right: 10px;
+        background: #fff;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        border: 3px solid #333;
+        border-radius: 50%;
+        padding-top: 20px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+}
