@@ -21,7 +21,7 @@ gulp.task('clean', () => del(['./dist/*','./src/views/*'], {dot: true}));
 //copy 复制文件
 gulp.task('copy', () => {
 
-    gulp.src(['./src/js/lib/easeljs.min.js','./src/js/lib/underscore-min.js','./src/js/lib/interact.min.js','./src/js/lib/exif.js'])
+    gulp.src(['./src/js/lib/easeljs.min.js','./src/js/lib/interact.min.js','./src/js/lib/exif.js'])
         .pipe(concat('lib.js'))
         .pipe(gulp.dest('./dist/js'))
 });
