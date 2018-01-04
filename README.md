@@ -1,2 +1,2 @@
 # composite-image
-Composite image demo
+Composite image demo 合成图片
